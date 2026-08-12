@@ -45,7 +45,7 @@ taller_afd/
 ### Diagrama AFD (Literales A, B y C)
 *Las tres primeras expresiones comparten la misma representación determinista.*
 
-![Diagrama AFD Literales A, B y C](docs/diagrams/diagrama_abc.png)
+![Diagrama AFD Literales A, B y C](docs/diagrams/automata_abc.png)
 
 ---
 
