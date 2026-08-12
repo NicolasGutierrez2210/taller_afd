@@ -1,33 +1,39 @@
-# Simulador de Autómata Finito Determinista (AFD)
+# ⚙️ Simulador de Autómata Finito Determinista (AFD)
 
-Este proyecto implementa un reconocedor de lenguaje mediante un Autómata Finito Determinista (AFD) en Python. El programa recibe dinámicamente un archivo de configuración de transiciones y un archivo con cadenas de entrada.
+## 📝 Introducción
 
-El proyecto está diseñado con base en los 4 ejercicios del Ejemplo 3.16 (Página 149) del libro Compiladores: Principios, Técnicas y Herramientas (Aho, Sethi, Ullman).
+Este proyecto consiste en la implementación en Python de un **Autómata Finito Determinista (AFD)** diseñado para procesar y evaluar cadenas de texto. La solución toma como referencia los ejercicios del **Ejemplo 3.16 (Página 149)** del libro *Compiladores: Principios, Técnicas y Herramientas* (Aho, Sethi, Ullman).
 
----
-
-## Expresiones Regulares Implementadas
-
-1. Literal a) (a|b)* (conf_a.txt): Genera cualquier cadena formada por los símbolos 'a' y 'b'.
-2. Literal b) (a*|b*)* (conf_b.txt): Equivalente a (a|b)*.
-3. Literal c) ((ε|a)b*)* (conf_c.txt): Genera cualquier secuencia sobre el alfabeto {a, b}.
-4. Literal d) (a|b)*abb (conf_d.txt): Reconoce cadenas sobre {a, b} que terminan estrictamente en la secuencia abb.
+A partir de las cuatro expresiones regulares propuestas en el texto guía, se dedujeron las tablas de transiciones de estado correspondientes para configurar el autómata dinámicamente mediante archivos externos `.txt` y evaluar las cadenas de prueba requeridas.
 
 ---
 
-## Estructura de Archivos
+## 🧪 Expresiones Regulares Implementadas
 
-* AFD.py: Script principal ejecutable en Python.
-* cadenas.txt: Conjunto de cadenas de entrada a probar.
-* conf_a.txt, conf_b.txt, conf_c.txt, conf_d.txt: Configuraciones del AFD.
-* automata_a_b_c.dot, automata_d.dot: Código Graphviz para los autómatas.
+| Literal | Expresión Regular | Archivo de Configuración | Descripción del Lenguaje |
+| :---: | :--- | :--- | :--- |
+| **a)** | `(a\|b)*` | `config/conf_a.txt` | Acepta cualquier secuencia de símbolos 'a' y 'b' (incluida la cadena vacía). |
+| **b)** | `(a*\|b*)*` | `config/conf_b.txt` | Equivalente formal a `(a\|b)*`. |
+| **c)** | `((ε\|a)b*)*` | `config/conf_c.txt` | Secuencias arbitrarias sobre el alfabeto `{a, b}`. |
+| **d)** | `(a\|b)*abb` | `config/conf_d.txt` | Cadenas sobre `{a, b}` que finalizan estrictamente en `abb`. |
 
 ---
 
-## Instrucciones de Ejecución en Linux
+## 📁 Estructura del Repositorio
 
-Probar el literal a:
-python3 AFD.py conf_a.txt cadenas.txt
-
-Probar el literal d:
-python3 AFD.py conf_d.txt cadenas.txt
+```text
+taller_afd/
+├── cadenas/                 # Archivo de cadenas de prueba de entrada
+│   └── cadenas.txt
+├── config/                  # Archivos de configuración con la matriz de transiciones
+│   ├── conf_a.txt
+│   ├── conf_b.txt
+│   ├── conf_c.txt
+│   └── conf_d.txt
+├── docs/                    # Capturas de los diagramas de estados (.png)
+│   └── diagrams/
+│       ├── diagrama_a_b_c.png
+│       └── diagrama_d.png
+├── scripts/                 # Código fuente ejecutable del AFD
+│   └── AFD.py
+└── README.md
