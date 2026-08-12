@@ -1,6 +1,6 @@
-# ⚙️ Simulador de Autómata Finito Determinista (AFD)
+# Simulador de Autómata Finito Determinista (AFD)
 
-## 📝 Introducción
+## Introducción
 
 Este proyecto consiste en la implementación en Python de un **Autómata Finito Determinista (AFD)** diseñado para procesar y evaluar cadenas de texto. La solución toma como referencia los ejercicios del **Ejemplo 3.16 (Página 149)** del libro *Compiladores: Principios, Técnicas y Herramientas* (Aho, Sethi, Ullman).
 
@@ -19,7 +19,7 @@ A partir de las cuatro expresiones regulares propuestas en el texto guía, se de
 
 ---
 
-## 📁 Estructura del Repositorio
+## Estructura del Repositorio
 
 ```text
 taller_afd/
