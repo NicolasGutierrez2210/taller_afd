@@ -8,7 +8,7 @@ A partir de las cuatro expresiones regulares propuestas en el texto guía, se de
 
 ---
 
-## 🧪 Expresiones Regulares Implementadas
+## Expresiones Regulares Implementadas
 
 | Literal | Expresión Regular | Archivo de Configuración | Descripción del Lenguaje |
 | :---: | :--- | :--- | :--- |
@@ -45,7 +45,7 @@ taller_afd/
 ### Diagrama AFD (Literales A, B y C)
 *Las tres primeras expresiones comparten la misma representación determinista.*
 
-![Diagrama AFD Literales A, B y C](docs/diagrams/diagrama_a_b_c.png)
+![Diagrama AFD Literales A, B y C](docs/diagrams/diagrama_abc.png)
 
 ---
 
