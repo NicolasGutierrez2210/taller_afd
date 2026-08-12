@@ -37,3 +37,33 @@ taller_afd/
 ├── scripts/                 # Código fuente ejecutable del AFD
 │   └── AFD.py
 └── README.md
+
+```
+---
+## Diagramas de Estados
+
+### Diagrama AFD (Literales A, B y C)
+*Las tres primeras expresiones comparten la misma representación determinista.*
+
+![Diagrama AFD Literales A, B y C](docs/diagrams/diagrama_a_b_c.png)
+
+---
+
+### Diagrama AFD (Literal D)
+*Representación del autómata determinista para la expresión que exige la terminación `abb`.*
+
+![Diagrama AFD Literal D](docs/diagrams/diagrama_d.png)
+
+---
+
+## Instrucciones de Ejecución
+
+Para ejecutar el programa en Linux, navega a la raíz del repositorio y pasa como parámetros el archivo de configuración y el de cadenas:
+
+```bash
+# Probar el literal a
+python3 scripts/AFD.py config/conf_a.txt cadenas/cadenas.txt
+
+# Probar el literal d
+python3 scripts/AFD.py config/conf_d.txt cadenas/cadenas.txt
+```
